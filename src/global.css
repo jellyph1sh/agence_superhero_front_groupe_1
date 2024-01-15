@@ -17,3 +17,19 @@
   font-weight: normal;
   color: var(--sp-grey);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+.red {
+  color: var(--sp-red);
+}

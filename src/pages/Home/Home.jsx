@@ -1,15 +1,16 @@
 import { useState } from "react";
-import reactLogo from "../../assets/images/react.svg";
+
+// COMPONENTS
+import Header from "../../components/Header/Header";
 
 // STYLES
 import "./Home.css";
-
 const Home = () => {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>Test</h1>
+      <Header/>
     </>
   );
 };

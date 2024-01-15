@@ -1,0 +1,19 @@
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(./assets/fonts/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: RobotoCondensedItalic;
+  src: url(./assets/fonts/RobotoCondensed-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+  font-family: RobotoCondensed, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --sp-grey: #4B4B4B;
+  --sp-red: #EC1D24;
+  --sp-white: #F6F5F2;
+  background-color: var(--sp-white);
+  font-weight: normal;
+  color: var(--sp-grey);
+}

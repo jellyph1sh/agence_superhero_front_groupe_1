@@ -1,0 +1,38 @@
+.searchbox {
+    width: 31.25vw;
+    height: 6vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 2px solid var(--sp-grey);
+    border-radius: 100px;
+}
+
+#searchbox-input {
+    margin-left: 1em;
+
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+
+    font-weight: lighter;
+    font-size: 28px;
+    color: var(--sp-grey);
+}
+
+#searchbox-input:focus {
+    outline: none;
+}
+
+.search-img {
+    width: 42px;
+    height: 42px;
+    margin-right: 1em;
+    filter: invert(35%);
+}
+
+.search-img:hover {
+    cursor: pointer;
+}

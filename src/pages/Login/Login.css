@@ -104,7 +104,7 @@
     background-color: var(--sp-red);
     color: white;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
 }
 
@@ -141,7 +141,7 @@
     background-color: rgba(0, 0, 0, 0.0);
     color: var(--sp-red);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
 }
 

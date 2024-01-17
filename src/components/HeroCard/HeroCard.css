@@ -1,0 +1,118 @@
+.herocard {
+    width: 13vw;
+    height: 30vh;
+
+    padding: 0.5em 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+
+    border: 2px solid var(--sp-grey);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.herocard-img {
+    width: 196px;
+    height: 196px;
+
+    border: 2px solid var(--sp-grey);
+    border-radius: 50%;
+}
+
+.herocard-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.herocard-details {
+    border: none;
+    background: none;
+
+    font-size: 12px;
+    font-weight: lighter;
+    text-decoration: underline;
+    color: var(--sp-red);
+}
+
+.herocard-details:hover {
+    cursor: pointer;
+}
+
+.herocard-min {
+    justify-content: none;
+    gap: 0.5em;
+}
+
+.herocard-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.herocard-img-min {
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid var(--sp-grey);
+    border-radius: 50%;
+}
+
+.herocard-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.herocard-title-details {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    width: 100%;
+}
+
+.herocard-subtitle {
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+}
+
+.herocard-body, .herocard-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.herocard-body {
+    width: 80%;
+    gap: 0.1em;
+}
+
+.herocard-information {
+    display: flex;
+    flex-direction: row;
+}
+
+.herocard-title-info {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.herocard-text-info {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.herocard-desc-info {
+    font-size: 12px;
+    font-weight: lighter;
+    height: 4em;
+    overflow-y: scroll;
+}

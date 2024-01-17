@@ -10,7 +10,11 @@ const Home = () => {
     <>
       <Header/>
       <div className="home-body">
+        <div className="home-filter">
+          <h3>Filter</h3>
+        </div>
         <div className="home-cards">
+          <HeroCard />
           <HeroCard />
           <HeroCard />
           <HeroCard />

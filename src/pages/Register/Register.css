@@ -1,10 +1,10 @@
-.login-box {
+.register-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 23.5vw;
-    height: 55vh;
+    height: 80vh;
     border: 2px solid var(--sp-grey);
     border-radius: 5px;
     padding: 1em;
@@ -14,33 +14,42 @@
     background-color: white;
 }
 
-.login-title {
-    margin: 1.5em;
+.register-title {
+    margin: 0.5em;
 
     font-weight: normal;
     font-size: 36px;
     text-transform: uppercase;
 }
 
-.login-body  {
+.register-body  {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 2em;
 
     width: 80%;
     height: 65%;
 }
 
-.login-inputs {
+.register-inputs {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 1em;
+    gap: 2em;
 }
 
-.email-box {
+.register-personnal, .register-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.input-box {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -48,18 +57,15 @@
     gap: 0.2em;
 }
 
-.email-box label, .password-texts label {
+.input-box label {
+    width: 100%;
+    text-align: left;
     margin-left: 0.1em;
     font-size: 16px;
     color: var(--sp-grey);
 }
 
-.email-box label {
-    width: 100%;
-    text-align: left;
-}
-
-#login-email, #login-password {
+.input {
     width: 99%;
     padding: 0.5em 0.25em;
     border: 2px solid var(--sp-grey);
@@ -67,36 +73,18 @@
     font-size: 20px;
 }
 
-.password-box {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.input:focus {
+    outline: none;
 }
 
-.password-texts {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.password-texts a {
-    font-size: 14px;
-    text-decoration: none;
-    color: var(--sp-red);
-}
-
-.login-buttons {
+.register-buttons {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.75em;
 }
 
-.login-btn-login {
+.register-btn-register {
     width: 100%;
     padding: 0.5em 0;
     border: 2px solid var(--sp-red);
@@ -108,32 +96,32 @@
     font-size: 18px;
 }
 
-.login-btn-login:hover {
+.register-btn-register:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.0);
     color: var(--sp-red);
 }
 
-.login-separator {
+.register-separator {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.login-separator p {
-    width: 50%;
+.register-separator p {
+    width: fit-content;
     margin: 0 1em;
     font-size: 12px;
 }
 
-.login-separator hr {
-    width: 100%;
+.register-separator hr {
+    width: 25%;
     height: 1px;
     border: none;
     border-top: 1px solid var(--sp-grey);
 }
 
-.login-btn-register {
+.register-btn-login {
     width: 100%;
     padding: 0.5em 0;
     border: 2px solid var(--sp-red);
@@ -145,7 +133,7 @@
     font-size: 18px;
 }
 
-.login-btn-register:hover {
+.register-btn-login:hover {
     cursor: pointer;
     color: white;
     background-color: var(--sp-red);

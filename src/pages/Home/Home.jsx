@@ -11,10 +11,12 @@ const Home = () => {
       <Header/>
       <div className="home-body">
         <div className="home-filter">
-          <h3>Filter</h3>
+          <div className="filter-button" onClick={() => {console.log("filter!")}}>
+            <img src="/src/assets/images/filter.svg" alt="filter icon" className="filter-img"/>
+            <h3 className="filter-title">Filter</h3>
+          </div>
         </div>
         <div className="home-cards">
-          <HeroCard />
           <HeroCard />
           <HeroCard />
           <HeroCard />

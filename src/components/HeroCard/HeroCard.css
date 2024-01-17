@@ -97,6 +97,7 @@
 .herocard-information {
     display: flex;
     flex-direction: row;
+    gap: 0.1em;
 }
 
 .herocard-title-info {

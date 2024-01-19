@@ -7,20 +7,31 @@ import "./Home.css";
 
 // STYLES
 import "./Home.css";
+
 const Home = () => {
-    const [apiData, setApiData] = useState([]);
+  const storedToken = localStorage.getItem('accessToken');
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-  
-
-    axios.get('http://localhost:8000/api/superHero')
-      .then(response => {
-        setApiData(response.data);
+    if (storedToken) {
+      axios.get('http://localhost:8000/api/superHero', {
+        headers: {
+          'Authorization': `Bearer ${storedToken}`,
+        },
       })
-      .catch(error => {
-        console.error('Erreur lors de la requête GET', error);
-      });
-  }, []);
+        .then(response => {
+          console.log("zertythg");
+          setApiData(response.data);
+        })
+        .catch(error => {
+          console.error('Erreur lors de la requête GET', error);
+        });
+    } else {
+      console.error('Le token n\'est pas disponible. L\'utilisateur n\'est peut-être pas connecté.');
+    }
+  }, [storedToken]);  
+
+
   return (
     <>
       <Header/>

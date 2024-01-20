@@ -1,4 +1,5 @@
 // COMPONENTS
+import CityCreation from "../../components/CityCreation/CityCreation";
 import Header from "../../components/Header/Header";
 
 // STYLES
@@ -12,6 +13,9 @@ const Create = () => {
             <Header/>
             <div className="body-creation">
                 <h1>Create all you need!</h1>
+                <div className="creation-box">
+                    <CityCreation/>
+                </div>
             </div>
         </>
     );

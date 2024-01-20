@@ -1,5 +1,6 @@
 // COMPONENTS
 import CityCreation from "../../components/CityCreation/CityCreation";
+import GadgetCreation from "../../components/GadgetCreation/GadgetCreation";
 import Header from "../../components/Header/Header";
 
 // STYLES
@@ -15,6 +16,7 @@ const Create = () => {
                 <h1>Create all you need!</h1>
                 <div className="creation-box">
                     <CityCreation/>
+                    <GadgetCreation/>
                 </div>
             </div>
         </>

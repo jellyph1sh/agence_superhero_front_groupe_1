@@ -33,14 +33,38 @@ const Superhero = ({ cities }) => {
         setPowersList(updatedList);
     }
 
+    /*
+        lastname: e.target.lastname.value,
+                firstname: e.target.firstname.value,
+                alias: e.target.alias.value,
+                sex: e.target.sex.value,
+                hair_color: e.target.hair.value,
+                description: e.target.description,
+                wiki_url: e.target.wiki.value,
+                origin_planet: e.target.planet.value,
+                city: e.target.city.value,
+                id_gadget: checkGadgets,
+                id_power: checkPowers,
+                id_vehicule: e.target.vehicle.value,
+    */
+
     const onHandleSubmit = (e) => {
         setError(null)
         if (storedToken) {
             e.preventDefault();
-            axios.post('http://localhost:8000/api/groups', {
-                group_names: e.target.name.value,
-                id_chief: e.target.chief.value,
-                hq_city: e.target.city.value,
+            axios.post('http://localhost:8000/api/superHero', {
+                firstname: e.target.firstname.value,
+                lastname: e.target.lastname.value,
+                alias: e.target.alias.value,
+                sex: e.target.sex.value,
+                hair_color: e.target.hair.value,
+                description: e.target.desc.value,
+                wiki_url: e.target.wiki.value,
+                origin_planet: e.target.planet.value,
+                city: e.target.city.value,
+                id_gadget: 1,
+                id_power: 1,
+                id_vehicule: e.target.vehicle.value,
             }, {
                 headers: {
                     'Authorization': `Bearer ${storedToken}`,
@@ -105,6 +129,8 @@ const Superhero = ({ cities }) => {
                 <input type="text" name="lastname" id="superhero-lastname" />
                 <label htmlFor="alias">Alias</label>
                 <input type="text" name="alias" id="superhero-alias" />
+                <label htmlFor="desc">Description</label>
+                <input type="text" name="desc" id="superhero-description" />
                 <label htmlFor="sex">Sex</label>
                 <select name="sex" id="superhero-sex">
                     <option value="male">Male</option>

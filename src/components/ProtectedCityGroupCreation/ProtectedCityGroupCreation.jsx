@@ -12,7 +12,7 @@ const ProtectedCityGroupCreation = ({ cities, groups }) => {
         setError(null)
         if (storedToken) {
             e.preventDefault();
-            axios.post('http://localhost:8000/api/vehicule', {
+            axios.post('http://localhost:8000/api/protectedCityGroup', {
                 id_group: e.target.group.value,
                 id_city: e.target.city.value,
             }, {

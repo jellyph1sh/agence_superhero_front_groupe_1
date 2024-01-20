@@ -1,10 +1,36 @@
 // COMPONENTS
+import  { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from "../../components/Header/Header";
 import HeroCard from "../../components/HeroCard/HeroCard";
+import "./Home.css";
 
 // STYLES
 import "./Home.css";
+
 const Home = () => {
+  const storedToken = localStorage.getItem('accessToken');
+  const [apiData, setApiData] = useState([]);
+
+  useEffect(() => {
+    if (storedToken) {
+      axios.get('http://localhost:8000/api/superHero', {
+        headers: {
+          'Authorization': `Bearer ${storedToken}`,
+        },
+      })
+        .then(response => {
+          console.log("zertythg");
+          setApiData(response.data);
+        })
+        .catch(error => {
+          console.error('Erreur lors de la requête GET', error);
+        });
+    } else {
+      console.error('Le token n\'est pas disponible. L\'utilisateur n\'est peut-être pas connecté.');
+    }
+  }, [storedToken]);  
+
 
   return (
     <>
@@ -17,20 +43,21 @@ const Home = () => {
           </div>
         </div>
         <div className="home-cards">
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
-          <HeroCard />
+             {apiData.map(hero => (
+          <HeroCard
+                 key={hero.id_hero}
+                 firstname={hero.firstname}
+                 lastname={hero.lastname}
+                 description={hero.description}
+                 hairColor={hero.hair_color}
+                 groups={hero.group_names}
+                 origin={hero.origin_planet}
+          />
+        ))}
+        
         </div>
       </div>
+
     </>
   );
 };
